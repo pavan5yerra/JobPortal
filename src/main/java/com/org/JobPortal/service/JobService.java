@@ -48,4 +48,7 @@ public class JobService {
          repo.deleteById(postId);
     }
 
+    public List<JobPost> search(String keyword) {
+        return repo.findByPostProfileContainingOrPostDescContaining(keyword , keyword);
+    }
 }
