@@ -4,10 +4,13 @@ import com.org.JobPortal.Model.JobPost;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
 public interface JobRepo extends JpaRepository<JobPost, Integer > {
 
+    List<JobPost> findByPostProfileContainingOrPostDescContaining(String PostProfile , String PostDesc);
 //    List<JobPost> jobs  = new ArrayList<>(
 //            Arrays.asList(
 //                        new JobPost(1,"Full Stack Developer" , "Super Expert needed" , 6, new ArrayList<>(Arrays.asList("Java","React","Spring","SpringBoot")))
