@@ -12,6 +12,12 @@ import java.util.List;
 @RestController
 public class JobController {
 
+    /*
+        >- When User hits the below exposed API's , we have added and modified multiple spring Security filters
+        >- Also Added our own filters such JWT Filter for JWT token authentication
+        >- All the configuration is done in SecurityConfig & JwtFilterConfig files
+        >- When Application is loaded Spring container will load or generate necessary code from these files
+     */
     @Autowired
     JobService service;
 
